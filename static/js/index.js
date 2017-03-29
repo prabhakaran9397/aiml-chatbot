@@ -53,7 +53,7 @@ $(window).on('keydown', function(e) {
 
 function interact(message){
 	// loading message
-  $('<div class="message loading new"><figure class="avatar"><img src="/static/res/botim.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+  $('<div class="message loading new"><figure class="avatar"><img src="/static/img/batman.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
 	// make a POST request [ajax call]
 	$.post('/message', {
 		msg: message,
@@ -62,7 +62,7 @@ function interact(message){
 		// 	remove loading meassage
     $('.message.loading').remove();
 		// Add message to chatbox
-    $('<div class="message new"><figure class="avatar"><img src="/static/res/botim.png" /></figure>' + reply['text'] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src="/static/img/batman.jpg" /></figure>' + reply['text'] + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
 
